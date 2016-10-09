@@ -13,8 +13,17 @@ sap.ui.define([
 			var sMsg = oBundle.getText("helloMsg", [sRecipient]);
 			// show message
 			MessageToast.show(sMsg);
+		},
+		_getDialog : function () {
+		 if (!this._oDialog) {
+		    this._oDialog = sap.ui.xmlfragment("Walkthrough.view.HelloDialog");
+		    this.getView().addDependent(this._oDialog);
+		 }
+		 return this._oDialog;
+		},
+		onOpenDialog : function () {
+		 this._getDialog().open();
 		}
-
 	});
 
 });
