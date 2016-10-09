@@ -3,7 +3,9 @@
 		<pages>
 			<Page title="{i18n>title}">
 				<content>
-					<Button text="Say Hello" press="onShowHello"/>
+					<Button text="{i18n>showHelloButtonText}" 
+							press="onShowHello"/>
+							
 					<Input value="{/recipient/name}" 
 							description="Hello {/recipient/name}" 
 							valueLiveUpdate="true" 
