@@ -1,15 +1,13 @@
-<mvc:View controllerName="Walkthrough.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<App>
+<mvc:View controllerName="Walkthrough.controller.App" 
+		xmlns:html="http://www.w3.org/1999/xhtml" 
+		xmlns:mvc="sap.ui.core.mvc" 
+		xmlns="sap.m"
+		displayBlock="true">
+	<App class="myAppDemoWT">
 		<pages>
-			<Page title="{i18n>title}">
+			<Page title="{i18n>homePageTitle}">
 				<content>
-					<Button text="{i18n>showHelloButtonText}" 
-							press="onShowHello"/>
-							
-					<Input value="{/recipient/name}" 
-							description="Hello {/recipient/name}" 
-							valueLiveUpdate="true" 
-							width="60%"/>
+					<mvc:XMLView viewName="Walkthrough.view.HelloPanel"/>
 				</content>
 			</Page>
 		</pages>

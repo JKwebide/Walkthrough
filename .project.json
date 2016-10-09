@@ -13,6 +13,11 @@
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.32.0",
       "dateTimeStamp": "Sun, 09 Oct 2016 01:39:38 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Sun, 09 Oct 2016 23:20:08 GMT"
     }
   ],
   "translation": {
