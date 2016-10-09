@@ -1,12 +1,13 @@
-<mvc:View controllerName="Walkthrough.controller.App" 
-			xmlns:html="http://www.w3.org/1999/xhtml" 
-			xmlns:mvc="sap.ui.core.mvc" 
-			xmlns="sap.m">
+<mvc:View controllerName="Walkthrough.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
 				<content>
 					<Button text="Say Hello" press="onShowHello"/>
+					<Input value="{/recipient/name}" 
+							description="Hello {/recipient/name}" 
+							valueLiveUpdate="true" 
+							width="60%"/>
 				</content>
 			</Page>
 		</pages>
