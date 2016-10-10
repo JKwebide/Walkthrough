@@ -3,8 +3,9 @@ sap.ui.define([
 	"sap/ui/Device",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/model/resource/ResourceModel",
-	"Walkthrough/model/models"
-], function(UIComponent, Device, JSONModel, ResourceModel, models) {
+	"Walkthrough/model/models",
+	"Walkthrough/controller/HelloDialog"
+], function(UIComponent, Device, JSONModel, ResourceModel, models, HelloDialog) {
 	"use strict";
 
 	return UIComponent.extend("Walkthrough.Component", {
@@ -34,12 +35,19 @@ sap.ui.define([
 			};
 			var oModel = new JSONModel(oData);
 			this.setModel(oModel);
-
+			
+			// set dialog
+			this.helloDialog = new HelloDialog();
+			
 			// set i18n model
 			var i18nModel = new ResourceModel({
 				bundleName: "Walkthrough.i18n.i18n"
 			});
 			this.setModel(i18nModel, "i18n");
+		},
+
+		exit : function () {
+			this.helloDialog.destroy();
 		}
 	});
 
